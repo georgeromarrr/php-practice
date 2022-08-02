@@ -35,14 +35,14 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="/php-projects/index.php">PHP Practice</a>
+        <a class="navbar-brand" href="/php-practice/index.php">PHP Practice</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
                 class="nav-link"
                 aria-current="page"
-                href="/php-projects/index.php"
+                href="/php-practice/index.php"
                 >Home</a
               >
             </li>
@@ -64,7 +64,7 @@
             <button
               type="button"
               class="btn btn-success rounded-pill px-3"
-              onclick="window.location.href='/php-projects/exercise_1.php'"
+              onclick="window.location.href='/php-practice/exercise_1.php'"
             >
               Solution <i class="bi bi-chevron-right"></i>
             </button>
@@ -79,7 +79,7 @@
             <button
               type="button"
               class="btn btn-success rounded-pill px-3"
-              onclick="window.location.href='/php-projects/exercise_2.php'"
+              onclick="window.location.href='/php-practice/exercise_2.php'"
             >
               Solution <i class="bi bi-chevron-right"></i>
             </button>
@@ -90,7 +90,8 @@
             Write a PHP function to display JSON decode errors.
           </div>
           <div class="col-2 d-flex justify-content-end">
-            <button type="button" class="btn btn-success rounded-pill px-3">
+            <button type="button" class="btn btn-success rounded-pill px-3"
+            onclick="window.location.href='/php-practice/exercise_3.php'">
               Solution <i class="bi bi-chevron-right"></i>
             </button>
           </div>
@@ -100,7 +101,8 @@
             Write a PHP program to find a missing number(s) from an array.
           </div>
           <div class="col-2 d-flex justify-content-end">
-            <button type="button" class="btn btn-success rounded-pill px-3">
+            <button type="button" class="btn btn-success rounded-pill px-3"
+            onclick="window.location.href='/php-practice/exercise_4.php'">
               Solution <i class="bi bi-chevron-right"></i>
             </button>
           </div>
@@ -111,7 +113,8 @@
             the sum of three consecutive numbers equal to zero.
           </div>
           <div class="col-2 d-flex justify-content-end">
-            <button type="button" class="btn btn-success rounded-pill px-3">
+            <button type="button" class="btn btn-success rounded-pill px-3"
+            onclick="window.location.href='/php-practice/exercise_5.php'">
               Solution <i class="bi bi-chevron-right"></i>
             </button>
           </div>
@@ -122,7 +125,8 @@
             number.
           </div>
           <div class="col-2 d-flex justify-content-end">
-            <button type="button" class="btn btn-success rounded-pill px-3">
+            <button type="button" class="btn btn-success rounded-pill px-3"
+            onclick="window.location.href='/php-practice/exercise_6.php'">
               Solution <i class="bi bi-chevron-right"></i>
             </button>
           </div>
@@ -133,7 +137,8 @@
             every element appears three times except for one.
           </div>
           <div class="col-2 d-flex justify-content-end">
-            <button type="button" class="btn btn-success rounded-pill px-3">
+            <button type="button" class="btn btn-success rounded-pill px-3"
+            onclick="window.location.href='/php-practice/exercise_7.php'">
               Solution <i class="bi bi-chevron-right"></i>
             </button>
           </div>
@@ -144,7 +149,8 @@
             arithmetic progression or not.
           </div>
           <div class="col-2 d-flex justify-content-end">
-            <button type="button" class="btn btn-success rounded-pill px-3">
+            <button type="button" class="btn btn-success rounded-pill px-3"
+            onclick="window.location.href='/php-practice/exercise_8.php'">
               Solution <i class="bi bi-chevron-right"></i>
             </button>
           </div>
@@ -155,7 +161,8 @@
             unsigned).
           </div>
           <div class="col-2 d-flex justify-content-end">
-            <button type="button" class="btn btn-success rounded-pill px-3">
+            <button type="button" class="btn btn-success rounded-pill px-3"
+            onclick="window.location.href='/php-practice/exercise_9.php'">
               Solution <i class="bi bi-chevron-right"></i>
             </button>
           </div>
@@ -166,7 +173,8 @@
             repeatedly until the result has a single digit.
           </div>
           <div class="col-2 d-flex justify-content-end pe-2">
-            <button type="button" class="btn btn-success rounded-pill px-3 pt">
+            <button type="button" class="btn btn-success rounded-pill px-3 pt"
+            onclick="window.location.href='/php-practice/exercise_10.php'">
               Solution <i class="bi bi-chevron-right"></i>
             </button>
           </div>

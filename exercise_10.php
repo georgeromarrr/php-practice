@@ -35,14 +35,14 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="/php-projects/index.php">PHP Practice</a>
+        <a class="navbar-brand" href="/php-practice/index.php">PHP Practice</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
                 class="nav-link"
                 aria-current="page"
-                href="/php-projects/index.php"
+                href="/php-practice/index.php"
                 >Home</a
               >
             </li>
@@ -55,35 +55,51 @@
     <div class="container pt-5 mt-5">
 
       <!-- exercise title -->
-      <p class="py-5">3. Write a PHP function to display JSON decode errors.</p>
+      <p class="py-5">10. Write a PHP program to add the digits of a positive integer repeatedly until the result has a single digit.</p>
 
-      <!-- exercise input -->
-      <p class="fst-italic fw-bold py-1">Array:</p>
       <div class="d-flex justify-content-center pb-1">
 
         <!-- input code starts here -->
-        <div>
-          <form action="sample.php" method="post">
-          array<span>( </span><input type="text" name="name"><span> )</span><br>
-          <input type="submit">
-          </form>
+        <form class="row g-3" action="/php-practice/exercise_10.php" method="post">
+          <div class="col-auto">
+            <input type="tel" class="form-control" placeholder="Input a positive integer" name="txtbox" required>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+          </div>
+        </form>
+        <!-- input code ends here -->
+        
+      </div>
 
-          <?php echo $_POST["name"];?>
-        </div>
+      <!-- exercise input -->
+      <p class="fst-italic fw-bold py-1">Input:</p>
+      <div class="d-flex justify-content-center pb-1">
+
+        <!-- input code starts here -->
+        <?php
+          echo $_POST["txtbox"];
+        ?>
         <!-- input code ends here -->
         
       </div>
 
       <!-- exercise output -->
-      <p class="fst-italic fw-bold py-5">JSON Representation:</p>
+      <p class="fst-italic fw-bold py-5">Output:</p>
       <div class="d-flex justify-content-center pb-5">
 
         <!-- php code starts here -->
         <?php
-          $fName = array($_POST["name"]);
-          $djson = json_encode($fName);
+          function add_integer($num)
+          {
+            if ($num > 0) {
+              return ($num - 1) % 9 + 1;
+            } else {
+              return 0;
+            }
+          }
 
-          var_dump(json_encode($fName));
+          echo add_integer($_POST["txtbox"]);
         ?>
         <!-- php code ends here -->
         
@@ -94,18 +110,9 @@
         <button
           type="button"
           class="btn btn-secondary rounded-pill px-3 mx-2 d-flex align-items-center"
-          onclick="window.location.href='/php-projects/exercise_2.php'"
+          onclick="window.location.href='/php-practice/exercise_9.php'"
         >
         <i class="bi bi-chevron-left"></i><span class="px-1 pb-btn-1">prev</span>
-        </button>
-
-        <!-- next button -->
-        <button
-          type="button"
-          class="btn btn-success rounded-pill px-3 mx-2 d-flex align-items-center"
-          onclick="window.location.href='/php-projects/exercise_4.php'"
-        >
-         <span class="px-1 pb-btn-1">next</span> <i class="bi bi-chevron-right"></i>
         </button>
       </div>
     </div>

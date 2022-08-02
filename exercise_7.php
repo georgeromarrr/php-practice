@@ -55,58 +55,54 @@
     <div class="container pt-5 mt-5">
 
       <!-- exercise title -->
-      <p class="py-5">3. Write a PHP function to display JSON decode errors.</p>
+      <p class="py-5">7. Write a PHP program to find the single element in an array where every element appears three times except for one.</p>
 
-      <!-- json error function -->
-      <?php
-        function jsonError($jsonString){
-          $json[] = $jsonString;
-          echo "Decoding: " . $jsonString;
-          json_decode($jsonString);
-          echo "<br>Error: ";
+      <!-- exercise input -->
+      <p class="fst-italic fw-bold py-1">Array:</p>
+      <div class="d-flex justify-content-center pb-1">
 
-          switch (json_last_error()) {
-            case JSON_ERROR_NONE:
-              echo "No errors";
-              break;
-            case JSON_ERROR_DEPTH:
-              echo "Maximum stack depth exceeded";
-              break;
-            case JSON_ERROR_STATE_MISMATCH:
-              echo "Invalid or malformed JSON";
-              break;
-            case JSON_ERROR_CTRL_CHAR:
-              echo "Control character error";
-              break;
-            case JSON_ERROR_SYNTAX:
-              echo "Syntax error";
-              break;
-            case JSON_ERROR_UTF8:
-              echo "Malformed UTF-8 characters";
-              break;
-            default:
-              echo "Unknown error";
-              break;
-          }
-
-          echo "<br>";
-          echo $json;
-          echo "<br><br><br>";
-          }
-      ?>
+        <!-- input code starts here -->
+        <?php
+          print_r(array(5, 3, 4, 3, 5, 5, 3));
+          echo '<br><br>';
+        ?>
+        <!-- input code ends here -->
+        
+      </div>
 
       <!-- exercise output -->
-      <p class="fst-italic fw-bold py-1">JSON Decode errors:</p>
+      <p class="fst-italic fw-bold py-5">Output:</p>
       <div class="d-flex justify-content-center pb-5">
 
         <!-- php code starts here -->
-        <div>
-          <?php jsonError("{'Romar':'1999','George':'1998','Johnny':'1991','Bravo':'1990','Kristine':'1998','Joy':'1997'}"); ?>
+        <?php
+          function uniqueNum($input)
+          {
+            $output = 0;
 
-          <?php jsonError('[\"Hello\", 3.14, true, \"name\": \"Joe\"]'); ?>
+            foreach ($input as $value) {
+              $findCounter = 0;
 
-          <?php jsonError('{"color1": "Red Color"}'); ?>
-        </div>
+              for ($i = 0; $i < count($input); $i++) {
+                if ($input[$i] === $value) {
+                  $findCounter++;
+                }
+              }
+
+              if ($findCounter === 1) {
+                // echo $value . ' found ' . $findCounter . ' time '. PHP_EOL;
+                $output = $value;
+                break;
+              } else {
+                // echo $value . ' found ' . $findCounter . ' times '. PHP_EOL;
+              }
+            }
+
+            return $output;
+          }
+
+          echo uniqueNum(array(5, 3, 4, 3, 5, 5, 3));
+        ?>
         <!-- php code ends here -->
         
       </div>
@@ -116,7 +112,7 @@
         <button
           type="button"
           class="btn btn-secondary rounded-pill px-3 mx-2 d-flex align-items-center"
-          onclick="window.location.href='/php-practice/exercise_2.php'"
+          onclick="window.location.href='/php-practice/exercise_6.php'"
         >
         <i class="bi bi-chevron-left"></i><span class="px-1 pb-btn-1">prev</span>
         </button>
@@ -125,7 +121,7 @@
         <button
           type="button"
           class="btn btn-success rounded-pill px-3 mx-2 d-flex align-items-center"
-          onclick="window.location.href='/php-practice/exercise_4.php'"
+          onclick="window.location.href='/php-practice/exercise_8.php'"
         >
          <span class="px-1 pb-btn-1">next</span> <i class="bi bi-chevron-right"></i>
         </button>

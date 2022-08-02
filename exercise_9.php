@@ -55,58 +55,53 @@
     <div class="container pt-5 mt-5">
 
       <!-- exercise title -->
-      <p class="py-5">3. Write a PHP function to display JSON decode errors.</p>
+      <p class="py-5">9. Write a PHP program to check whether a sequence of numbers is an arithmetic progression or not.</p>
 
-      <!-- json error function -->
-      <?php
-        function jsonError($jsonString){
-          $json[] = $jsonString;
-          echo "Decoding: " . $jsonString;
-          json_decode($jsonString);
-          echo "<br>Error: ";
+      <div class="d-flex justify-content-center pb-1">
 
-          switch (json_last_error()) {
-            case JSON_ERROR_NONE:
-              echo "No errors";
-              break;
-            case JSON_ERROR_DEPTH:
-              echo "Maximum stack depth exceeded";
-              break;
-            case JSON_ERROR_STATE_MISMATCH:
-              echo "Invalid or malformed JSON";
-              break;
-            case JSON_ERROR_CTRL_CHAR:
-              echo "Control character error";
-              break;
-            case JSON_ERROR_SYNTAX:
-              echo "Syntax error";
-              break;
-            case JSON_ERROR_UTF8:
-              echo "Malformed UTF-8 characters";
-              break;
-            default:
-              echo "Unknown error";
-              break;
-          }
+        <!-- input code starts here -->
+        <form class="row g-3" action="/php-practice/exercise_9.php" method="post">
+          <div class="col-auto">
+            <input type="tel" class="form-control" placeholder="Input a Number" name="txtbox" required>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+          </div>
+        </form>
+        <!-- input code ends here -->
+        
+      </div>
 
-          echo "<br>";
-          echo $json;
-          echo "<br><br><br>";
-          }
-      ?>
+      <!-- exercise input -->
+      <p class="fst-italic fw-bold py-1">Input:</p>
+      <div class="d-flex justify-content-center pb-1">
+
+        <!-- input code starts here -->
+        <?php
+          echo $_POST["txtbox"];
+        ?>
+        <!-- input code ends here -->
+        
+      </div>
 
       <!-- exercise output -->
-      <p class="fst-italic fw-bold py-1">JSON Decode errors:</p>
+      <p class="fst-italic fw-bold py-5">Output:</p>
       <div class="d-flex justify-content-center pb-5">
 
         <!-- php code starts here -->
-        <div>
-          <?php jsonError("{'Romar':'1999','George':'1998','Johnny':'1991','Bravo':'1990','Kristine':'1998','Joy':'1997'}"); ?>
-
-          <?php jsonError('[\"Hello\", 3.14, true, \"name\": \"Joe\"]'); ?>
-
-          <?php jsonError('{"color1": "Red Color"}'); ?>
-        </div>
+        <?php
+          function reverseNum($nmber)
+          {
+            $result = 0;
+            for ($i = 0; $i < 32; $i++) {
+              $result <<= 1;
+              $result |= ($nmber & 1);
+              $nmber >>= 1;
+            }
+            return $result;
+          }
+          echo reverseNum($_POST["txtbox"]);
+        ?>
         <!-- php code ends here -->
         
       </div>
@@ -116,7 +111,7 @@
         <button
           type="button"
           class="btn btn-secondary rounded-pill px-3 mx-2 d-flex align-items-center"
-          onclick="window.location.href='/php-practice/exercise_2.php'"
+          onclick="window.location.href='/php-practice/exercise_8.php'"
         >
         <i class="bi bi-chevron-left"></i><span class="px-1 pb-btn-1">prev</span>
         </button>
@@ -125,7 +120,7 @@
         <button
           type="button"
           class="btn btn-success rounded-pill px-3 mx-2 d-flex align-items-center"
-          onclick="window.location.href='/php-practice/exercise_4.php'"
+          onclick="window.location.href='/php-practice/exercise_10.php'"
         >
          <span class="px-1 pb-btn-1">next</span> <i class="bi bi-chevron-right"></i>
         </button>
